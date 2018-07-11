@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+	<link href="css_contact/style_c.css" rel="stylesheet" />
+	<title>Nate Walker: Contact and Info</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+	<meta name="viewport" content="width=device-width" />
+	<script src="js_contact/script.js"></script>
+</head>
+<body ng-app="myApp">
+	<div id="canvasWrapper">
+		<div class="container">
+			<div class="col-sm-12 content panel-collapse collapse in accordion-body" data-toggle="collapse">
+     			<a href="../paint/">Paintings</a><br>
+     			<a href="../mix/">Projects</a><br>
+				<a href="/contact">Contact and Info</a>
+    		</div>
+    	</div>
+		<div class="canvas">
+			<div id="headerWrapper">
+				<header id="header">
+					<div id="logo">
+						<h1 class="logo site-title">
+							<a href="../">
+								Nate Walker
+							</a>
+							<div class="menuIcon" data-target=".content">
+								<span>Menu</span>
+							</div>
+						</h1>
+						<div class="logo-subtitle">
+							Paintings and Drawings
+						</div>
+					</div>
+					<div class="defaultNav">
+						<div class="catagories">
+							<ul>
+								<li>
+									<a href="../paint/">Paintings</a>
+								</li>
+								<li>
+									<a href="../mix/">Projects</a>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts">
+							<ul>
+								<li>
+									<a href="/contact">Contact and Info</a>
+								</li>
+							</ul>
+						</div>
+						 <div class="footer">
+                			<div class="footer-Wrapper">
+                    			<div class="footerMenu" ng-controller="FooterController">
+                        			<div class="linkedIn" id="linkedIn">
+                            			<a href="https://www.instagram.com/ifiwasanickle" target="blank">
+                                			<img ng-src="{{instagram}}"/>
+                            			</a>
+                        			</div>
+                        			<div class="ohHello">
+                            			<a href="http://nates.website" target="blank">
+                            				<img ng-src='{{footerlogo}}'/>
+                            			</a>
+                        			</div>
+                        			<div class="gitHub"> 
+                            			<a href="https://github.com/cornerofnwdev" target="blank">
+                                			<img ng-src='{{github}}'/>
+                            			</a>
+                        			</div>
+                    			</div>
+                			</div>
+            			</div>
+					</div>
+				</header>
+			</div>
+			<div id="pageWrapper">
+				<div id="galleryWrapper">
+					<div id="slideshowGallery">
+						<div class="col-md-6 col-sm-12" id="meIcon">
+							<img class="responsive-img" src="img/self.jpg"/>
+						</div>
+						<div class="col-md-6 col-sm-12" id="contactInfo">
+							<div class="contact_about">
+								<h3>About Nate Walker</h3>
+									<p>
+										A freelance web developer living in Philadelphia with a passion for art.  Born in Doylestown PA he moved to Quakertown PA and received his BA in History from Moravian College in 2012.  During these years drawing historical characters as cartoons became a passion and would blossom into the expressionist style characters portrayed in his paintings.  This summer his art will be on display at various local shops in Philadelphia including the Philadelphia Folk Society.  Check out his <a href="http://sketchpadmanifesto.com/" target="blank">art blog</a> or his shop at <a href="https://society6.com/ifiwasanickle" target="blank">society6</a>
+									</p><br>
+										<p>
+									For any inquires, or to just say hi, you can reach Nate at the letter below.
+									</p>
+									
+								</div>						
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="contact_info">
+									<a href="mailto:newwalker20@gmail.com">
+										<img src="img/letter_button.svg"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js_contact/app.js"></script>
+	<script src="js_contact/controllers/FooterController.js"></script>
+</body>
+</html>
