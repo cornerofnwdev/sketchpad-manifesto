@@ -1,0 +1,43 @@
+        <div class="container">
+            <h3> The </h3>
+            <h1> {{ title }} </h1>
+            <h2> {{ subtitle }} </h2>
+             <img ng-src="{{logo}}" class="logo"/>
+            <div ng-repeat="product in products" class="col-md-6" > 
+                <div class="thumbnail">
+                    <a ng-href="{{ product.cover }}" data-lightbox="image-1">
+                      <img ng-src="{{ product.cover}}"/>
+                     </a>
+                    <p class="date">
+                        {{ product.pubdate | date }}
+                     </p>
+                     <p class="title">
+                      {{ product.name }}
+                      </p>
+                     <p class="number">
+                         {{ product.number }}
+                    </p>
+                </div>
+             </div>
+        </div>
+             <div class="footer">
+                <div class="footer-Wrapper">
+                    <div class="footerMenu" ng-controller="FooterController">
+                        <div class="linkedIn" id="linkedIn">
+                            <a href="https://www.linkedin.com/in/nathan-walker-471b9079/">
+                                <img ng-src="{{linkedin}}"/>
+                            </a>
+                        </div>
+                        <div class="ohHello">
+                            <a href="mailto:newwalker20@gmail.com">
+                            <img ng-src='{{footerlogo}}'/>
+                            </a>
+                        </div>
+                        <div class="gitHub"> 
+                            <a href="https://github.com/cornerofnwdev">
+                                <img ng-src='{{github}}'/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>

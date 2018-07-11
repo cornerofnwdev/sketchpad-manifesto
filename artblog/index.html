@@ -1,0 +1,131 @@
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/lightbox.css" rel="stylesheet"/>
+     <title> The Sketchpad Manifesto </title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112323076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112323076-1');
+</script>
+	</head>
+	<body ng-app="myApp">
+       <div class="container">
+            <div class="col-sm-12 content panel-collapse collapse in accordion-body" data-toggle="collapse">
+                <div class="searchField ng-md-12">
+                     <input class="col-md-6" type="text" onfocus="this.value=''" ng-model="searchBox" placeholder="Search">
+                     <?php include 'test.php';?>
+                 </div>
+            </div>
+        </div>
+        <div class="main" ng-controller="MainController">
+            <div class="mag_glass" ng-controller="FooterController">
+                <img ng-src='{{mag}}'/>
+            </div>
+            <div class="container">
+                <h3> The </h3>
+                <h1> {{ title }} </h1>
+                <h2> {{ subtitle }} </h2>
+                <br>
+                 <img ng-src="{{logo}}" class="logo"/>
+                <div class="col-md-6" ng-repeat="product in products | filter: date"> 
+                    <div class="thumbnail">
+                        <a ng-href="{{ product.cover }}" data-lightbox="image-1">
+                             <img ng-src="{{ product.cover }}" class="load"/>
+                        </a>
+                        <p class="title">
+                            {{ product.name }}
+                        </p>
+                        <p class="date">
+                            {{ product.pubdate | date : "fullDate" }}
+                        </p>
+                        <p class="number">
+                            {{ product.number }}
+                        </p>
+                        <!-- <form>
+                              <fieldset>    
+                                <div>
+                                  <label>
+                                    Comment:
+                                    <textarea ng-model='text'></textarea>
+                                  </label>
+                                </div>
+                                <div>
+                                  <input class='button' ng-click='submit()' type='submit' value='Submit'>
+                                </div>
+                              </fieldset>
+                        </form>
+                        <ul>
+                            <li ng-repeat='comment in comments'>
+                                <div class='comment' ng-class='{approved: comment.approved}'>
+                                  <h5>
+                                    {{comment.name}}:
+                                  </h5>
+                                  <div>
+                                      {{comment.text}}
+                                  </div>
+                                  <p>
+                                    <small>
+                                      <a ng-click='approve(comment)' ng-hide='comment.approved'>
+                                            approve comment
+                                            |
+                                      </a>
+                                      <a ng-click='drop(comment)'>
+                                            delete comment
+                                      </a>
+                                    </small>
+                                  </p>
+                                  </div>
+                            </li>   
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-Wrapper">
+                    <div class="footerMenu" ng-controller="FooterController">
+                        <div class="linkedIn" id="linkedIn">
+                            <a href="https://www.linkedin.com/in/nathan-walker-471b9079/">
+                                <img ng-src="{{linkedin}}"/>
+                            </a>
+                        </div>
+                        <div class="ohHello">
+                            <a href="mailto:newwalker20@gmail.com">
+                            <img ng-src='{{footerlogo}}'/>
+                            </a>
+                        </div>
+                        <div class="gitHub"> 
+                            <a href="https://github.com/cornerofnwdev">
+                                <img ng-src='{{github}}'/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+            <!-- Lightbox.js -->
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/FooterController.js"></script>
+<!--     <script src="js/test.php"></script> -->
+ 
+	</body>
+</html>
